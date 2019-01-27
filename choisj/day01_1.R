@@ -26,4 +26,49 @@ ages[1] <- 20
 names <- c("김","이","박")
 names[2] <- "박아무개"
 
-  
+# factor 구분하기
+address <- c("서울","대구","부산","군산","서울","청주","서울","청주")
+address
+str(address)
+
+str(year)
+# structure => 한눈에 알아볼 수 있게 보여주는 것
+
+address2 <- as.factor(address)
+address2
+str(address2)
+
+address2[1] <- "부산"
+address2
+
+# factor는 그 이외 값은 들어가지 않게 한다. Charactor 는 가능
+
+# 입력의 다양한 형태
+x <- scan()
+x
+# a real = 실수
+# 100 정수(integer, int)
+# 100.0 실수(real, float)
+
+x2 <- scan()
+x2
+
+str(x2)
+class(x2)
+typeof(x2)
+# double 은 real과 비슷한 말 - 소수점 16자리까지 나타냄
+
+food <- scan(what = "")
+food
+
+str(food)
+class(food)
+typeof(food)
+
+favorite <- food[1]
+cat("내가 제일 좋아하는 음식은?", favorite)
+
+library(glue)
+second <- food[2]
+glue("{second}은 내가 2번 째로 좋아하는 음식이예요.")
+
